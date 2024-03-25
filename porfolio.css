@@ -1,34 +1,38 @@
+/* ELEMENTOS GENERALES */
 
 @font-face {
     font-family: "Haarlem Sans";
     src: url("Recursos/Font/i_am_awake/I\ Am\ Awake.ttf");
 }
 
+@font-face {
+    font-family: "I Am Awake";
+    src: url("Recursos/Font/haarlem_sans/Haarlem\ Sans.ttf");
+}
+
+/*Prueba tamaño completo*/
+
+ * { 
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
 
 html{
     background-color: rgb(138, 194, 127);
-
 }
 
 header{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "I Am Awake";
     font-size: 40px;
     padding: 40px;
+    position: sticky; top: 0;
+    background-color: rgb(138, 194, 127)
    
 }
 
-#home{
-    margin-right: 1100px;
-}
-#about, #works, #contact{
-    margin-right: 30px;
-    
-}
-a{
-    outline: none;
-    text-decoration: none;
-    padding: 2px 1px 0;
-}
 a:link{
     color: rgb(24, 112, 43);
 }
@@ -36,11 +40,56 @@ a:visited{
     color: rgb(24, 112, 43);
 }
 
-  
+a{
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+#home{
+    margin-right: 1050px;
+}
+#about, #works, #contact{
+    margin-right: 30px;
+    
+}
+
+
+#footermikelH{
+
+    text-align: center;
+    position: relative;
+    
+
+}
+
+#footermikelA{
+
+    text-align: center;
+    position: relative;
+    top: 127px;
+
+
+}
+
+#footermikelC{
+
+    text-align: center;
+    position: relative;
+    top: 110px;
+
+}
+
+
+
+
+/* PAGINA HOME */
 
 #Nombre{
     
     margin-left: 500px;
+    position: relative;
+    top: 50px;
     font-size: 30px;
     font-family: "Haarlem Sans";
     
@@ -52,6 +101,8 @@ a:visited{
 
     margin-left: 500px;
     margin-right: 500px;
+    position: relative;
+    top: 40px;
 
     font-family:"Haarlem Sans";
     font-size: 100px;
@@ -63,26 +114,319 @@ a:visited{
     height: 300px;
     width: 300px;
     position: relative;
-    bottom: 400px;
+    bottom: 350px;
     left: 1100px;
+    border-radius: 300px;
 
 }
 
+/* PAGINA DE BIOGRAFIA */
+
 #aboutMe{
-text-align: center;
+    text-align: justify;
+    position: relative;
+    left: 300px;
+    font-size: 20px;
+    top: 105px;
+}
+
+.aboutMeAll{
+    display: flex;
+}
+
+#aboutMeDescription{
+
+    padding-right: 100px;
+    margin-right: 600px;
 }
 
 #miCara{
     position: relative;
-    bottom: 200px;
-    left: 1100px;
+    top: 80px;
+    right: 250px;
     width: 300px;
-    height: 340px;
+    height: 365px;
+}
+
+#experiencia{
+
+    display: flex;
+    color: rgb(24, 112, 43);
+    font-family: "I Am Awake";
+    font-size: 40px;
+    margin-top: 100px;
+    margin-left: 600px;
+
+}
+
+#expBlock1, #expBlock2{
+
+    display: flex;
+    margin: 20px;
+  
+
+}
+/* PAGINA WORKS  */
+
+.enlacesWork{
+    display: flex;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+.enlaceCriptoImg, .enlaceTarotImg{
+    margin: 20px;
+    width: 700px;
+    height: 350px;
+}
+
+
+
+.containerCripto{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.textoInCripto{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: white;
+    font-family: "I Am Awake";
+    font-size: 30px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.textoInCriptoHover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    color: white;
+    font-family: "I Am Awake";
+    font-size: 50px;
+    background-color: black;
+    border-radius: 10px;
+}
+.textoInCriptoHover:hover {
+    opacity: 0;
+}
+
+.containerCripto:hover .textoInCripto{
+    opacity: 1;
+}
+
+
+
+.enlaceCriptoImg:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.containerTarot{
+    position: relative;
+    text-align: center;
+}
+
+.textoInTarotHover{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  color: white;
+  font-family: "I Am Awake";
+  font-size: 50px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.textoInTarotHover:hover{
+    opacity: 0;
+}
+
+.textoInTarot{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: white;
+  font-family: "I Am Awake";
+  font-size: 30px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.containerTarot:hover .textoInTarot{
+    opacity: 1;
+}
+.enlaceTarotImg:hover{
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+/* PAGINA WORKS CRIPTO */
+
+/* .criptoGeneral{
+    display: flex;
+    
+} */
+.criptoObject1, .criptoObject2, .criptoObject3,
+ .criptoObject4, .criptoObject5, .criptoObject6, 
+ .criptoObject7, .criptoObject8, .criptoObject9, 
+ .criptoObject10, .criptoObject11, .criptoObject12, .criptoObject13{
+    display: flex;
+}
+
+.criptObject{
+    display: inline;
+    background-color: rgb(41, 17, 7);
+}
+
+.criptoimg{
+    margin: 5px;
+    height: 800px;
+    width: 800px;
+    margin-top: 20px;
+    
+
+}
+
+.criptoText{
+   
+    margin: 50px;
+    
+    width: 100vh;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+/* PAGINA WORK TAROT */
+
+.tarotHeader{
+    position: fixed;
+}
+
+.tarotText{
+    text-align: center;
+    left: 350px;
+    top: 125px;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+
+.imgTotal{
+    margin-top: 225px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    padding: 40px;
+}
+
+.tarot1, .tarot2, .tarot3, .tarot4, .tarot5, .tarot6, 
+.tarot7, .tarot8, .tarot9, .tarot10, .tarot11, .tarot12, 
+.tarot13, .tarot14, .tarot15, .tarot16, .tarot17, .tarot18, 
+.tarot19, .tarot20, .tarot21, .tarot22{
+
+    margin: 20px;
+}
+
+#footermikelT{
+    position: fixed;
+   
+    
+}
+
+/* PAGINA DE CONTACTO */
+
+#textoContact{
+    
+    position: relative;
+    left: 20px;
 }
 
 input{
-    width: 100%;
+
+    width: 400px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
+}
+
+div#contacto{
+
+    margin-right: 600px;
+    position: absolute;
+    left: 400px;
+    
+    
+    font-family: "I Am Awake";
+}
+
+.contactBoxName{
+
+    position: relative;
+    left: 20px;
+    top: 40px;
+
+}
+
+.contactBoxEmail{
+
+    position: relative;
+    left: 450px;
+    bottom: 40px;
+
+}
+
+.contactBoxTelefono{
+
+    position: relative;
+    left: 20px;
+
+}
+
+.contactBoxWhat{
+
+    position: relative;
+    left: 450px;
+    bottom: 80px;
+
+}
+
+.contactBoxMesagge{
+
+    position: relative;
+    left: 20px;
+    bottom: 40px;
+
+}
+
+textarea{
+
+    width: 825px;
+    height: 150px;
+
+}
+
+#contactButton{
+
+    position: relative;
+    width: 100px;
+    height: 50px;
+    left: 20px;
+    bottom: 20px;
+    
+
+}
+#footermikelC{
+    top: 780px;
 }
